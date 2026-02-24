@@ -1,26 +1,100 @@
 @import "tailwindcss";
 
+/* =========================================
+   SMP REVIVE BRAND TOKENS
+   ========================================= */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f8f7f4;
+  --foreground: #141414;
+
+  --brand-primary: #1f3447;   /* navy */
+  --brand-accent: #c8a46b;    /* gold */
+
+  --brand-accent-soft: #e6d3a3;
+  --brand-muted: #6b7280;
+  --brand-light: #eceae4;
+
+  --brand-dark: #0f1720;
+
+  --border-subtle: rgba(0, 0, 0, 0.08);
+
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --radius-xl: 36px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+html,
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* utility classes */
+.bg-brand-primary { background-color: var(--brand-primary); }
+.bg-brand-accent { background-color: var(--brand-accent); }
+.bg-brand-light { background-color: var(--brand-light); }
+.bg-brand-dark { background-color: var(--brand-dark); }
+
+.text-brand-primary { color: var(--brand-primary); }
+.text-brand-accent { color: var(--brand-accent); }
+.text-brand-muted { color: var(--brand-muted); }
+
+.border-subtle { border-color: var(--border-subtle); }
+
+.btn-primary {
+  background: var(--brand-primary);
+  color: white;
+  border-radius: 999px;
+  padding: 0.7rem 1.4rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.btn-primary:hover { opacity: 0.9; }
+
+.btn-accent {
+  background: var(--brand-accent);
+  color: white;
+  border-radius: 999px;
+  padding: 0.7rem 1.4rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.btn-accent:hover { opacity: 0.9; }
+
+.section { padding-top: 6rem; padding-bottom: 6rem; }
+.section-sm { padding-top: 4rem; padding-bottom: 4rem; }
+
+.radius-lg { border-radius: var(--radius-lg); }
+.radius-xl { border-radius: var(--radius-xl); }
+
+/* Typography helpers */
+.font-display {
+  font-family: var(--font-display), ui-serif, Georgia, Cambria, "Times New Roman", serif;
+  letter-spacing: -0.01em;
+}
+
+/* Soft “print” shadow for overlapping panels */
+.shadow-print {
+  box-shadow: 0 35px 80px -60px rgba(0, 0, 0, 0.65);
+}
+
+:root {
+  /* keep your existing vars */
+  --brand-charcoal: #3f3f3f; /* dark gray like the screenshot */
+}
+
+:root {
+  --font-accent: var(--font-accent);
+}
+
+.font-accent {
+  font-family: var(--font-accent), serif;
 }
