@@ -954,7 +954,7 @@ export default function Page() {
       </div>
 
       <div className="mt-10 border-t border-black/10 pt-6 text-xs text-black/45">
-        Designed as a homepage concept - layout + visuals to be finalized with brand assets.
+        Homepage redesign concept by Ashanti Yow, Founder of The Social Infinity. Not authorized for production use without written approval.
       </div>
     </div>
   </footer>
